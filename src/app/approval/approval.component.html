@@ -1,0 +1,35 @@
+
+
+<div class="dashboard">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-2">
+            <app-side-menu></app-side-menu>
+          </div>
+          <div class="col-md-10">
+            <div class="approval">
+              <table class="table table-striped">
+                <thead >
+                  <tr id="table-head">
+                    <th>Sr. No</th>
+                    <th>Client Id</th>
+                    <th>business Name</th>
+                    <th>Request Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tr *ngFor= "let data of approvalData; let i= index" >
+                  <td>{{i+1}}</td>
+                  <td>{{data.tenantUserId}}</td>
+                  <td>{{data.businessName}}</td>
+                  <td>{{data.createdDate}}</td>
+                  <td></td>
+                </tr>
+                </table>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- <app-side-menu></app-side-menu> -->

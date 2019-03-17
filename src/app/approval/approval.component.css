@@ -1,0 +1,47 @@
+body{
+    background-color:gray !important;
+    margin: 0;
+
+}
+
+.col-md-2{
+    background-color: darkblue;
+}
+
+tbody {
+    border: 1px solid darkred;
+}
+
+tr {
+    background-color: white;
+    color: black;
+}
+
+.table-striped thead{
+    background-color:blue;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: lightsteelblue;
+}
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: whitesmoke;
+}
+
+
+.approval-table .btn-yes{
+    background-color: green !important;
+    color: white !important;
+    margin-right: 10px;
+}
+
+.btn-no{
+    background-color: darkgoldenrod !important;
+    color: white;
+}
+
+#table-head{
+    background-color: darkblue;
+    color: white;
+    font-weight: 500;
+}

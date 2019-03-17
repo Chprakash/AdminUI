@@ -1,0 +1,19 @@
+.btn a:hover {
+    color: red !important;
+}
+
+.alert-danger{
+    color: aqua !important;
+    background-color:transparent !important;
+
+}
+
+a{
+    color: turquoise;
+    text-decoration: none;
+    
+}
+
+.loginBox {
+    height: 450px;
+}

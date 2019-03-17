@@ -1,0 +1,15 @@
+.loginBox{
+	height: 570px;
+}
+
+.alert-danger{
+    color: aqua !important;
+    background-color:transparent !important;
+
+}
+
+a{
+    color: turquoise;
+    text-decoration: none;
+    
+}

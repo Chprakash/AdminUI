@@ -1,0 +1,40 @@
+
+<html>
+  
+  <body>
+    <h1>{{errmsge}}</h1>
+      <div class="loginBox">
+        <img src="../../assets/user.png" class="user">
+        <h2>Log in here</h2>
+          
+        <form id="formlogin"  sname="formlogin" #logindata = "ngForm" (ngSubmit)= "login(logindata.value)">        
+            
+          <!-- <div class = "alert alert-danger" *ngIf = "errorMessage">{{errorMessage}}</div> -->
+          <div class="form-group">
+              <p>Email</p>
+              <input type="text" class="form-control"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  name = "emailID" class="form-control" id="emailID"  ngModel  #emailref="ngModel"/>
+              <div *ngIf="emailref.errors &&(emailref.touched || emailref.dirty)" class ="aler alert-danger">
+                <div [hidden]="!emailref.errors?.pattern">
+                  Invalid email id
+              </div> 
+          </div></div>
+          
+          <div class="form-group">
+              <p>Password</p>
+              <input type="password"  name = "password" class="form-control" id="password"  ngModel >
+          </div>
+          <button type="submit" value="add employee" class="btn">Log in</button>
+            <a [routerLink]="['/adminregistration']" class="loginOption" ><i>New User ?</i></a><br>
+            <div class = "" *ngIf = "errorMessage">
+              <a [routerLink]="['/adminforgot']" class="loginOption" ><i>Forget Password</i></a>
+            </div>
+            <!-- <a [routerLink]="['/adminforgot']" class="loginOption" ><i>Forget Password</i></a> -->
+          </form>
+        </div>
+  
+    <!-- <div>
+      <router-outlet></router-outlet>
+    </div> -->
+  
+  </body>
+  </html>

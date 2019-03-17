@@ -1,0 +1,121 @@
+
+body
+{
+	margin: 0;
+	padding: 0;
+    /* background: url(bg.jpg); */
+    background-color: gary !important;
+	background-size: cover;
+	font-family: sans-serif;
+}
+.loginBox 
+{
+	position: absolute;
+	top: 52%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 350px;
+	height: 420px;
+	padding:  80px 40px;
+	box-sizing: border-box;
+    background : darkslategray;
+    
+}
+
+.user
+{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: calc(-100px/2);
+	left: calc(50% - 50px)
+}
+
+h2{
+	margin: 0;
+	padding: 0 0 20px;
+	color: #efed40;
+	text-align: center;
+}
+
+.loginBox p 
+{
+	margin: 0;
+	padding: 0;
+	font-weight: 300;
+	color: #fff;
+}
+
+.loginBox input
+{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.form-control:focus {
+    color: white;
+	background-color: transparent;
+	box-shadow: none;
+	
+}
+
+/* 
+.loginBox[_ngcontent-c1] input[_ngcontent-c1]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	
+} */
+
+a{
+	/* color : turquoise !important; */
+}
+a:hover{
+	color: turquoise;
+}
+.loginOption{
+	/* padding-left: 20px; */
+	float: right;
+
+}
+.btn {
+    color: #fff !important;
+    background-color:darkslategrey !important;
+    border-color: white !important;
+}
+.btn-cust{
+	background: #4268D6 !important;
+	padding: 17px;
+}
+.cancel{
+	padding: 15px;
+	color: blue;
+	text-decoration: underline;	
+	font-size: 20px;
+}
+
+.loginBox input {
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.loginBox input :visited{
+	 margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+}

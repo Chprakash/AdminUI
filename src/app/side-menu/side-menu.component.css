@@ -1,0 +1,62 @@
+.col-md-2{
+    background-color: #4E73DF;
+}
+
+.side-nav {
+    /* background-color: #4E73DF; */
+    color: white;
+    padding: 0 !important;
+    height: -webkit-fill-available;
+    
+}
+
+.main-heading{
+    margin-top: 22px;
+}
+
+i{
+    font-size: 27px;
+}
+.dropdown-toggle{
+    margin-left: 0;
+}
+#HomeSubmenu , #pageSubmenu {
+    margin-left: 30%;
+    background-color: white;
+     border-radius: 16px;
+     margin-right: 2%;
+}
+
+#HomeSubmenu li a{
+    color: black;
+    /* margin-left: 21%; */
+    padding: 5%;
+}
+
+#pageSubmenu li a{
+    color: black;
+    margin-left: 36%;
+    padding: 5%;
+}
+
+.Admin-header{
+    margin-top: 20px;
+    border: none;
+    border-radius: 7px;
+    border-bottom: 0.5px solid wheat;
+
+}
+
+li {
+
+}
+
+a{ 
+color: black;
+}
+ul , li ,a {
+    color: white;
+    padding-top: 2.2px;
+    padding-bottom: 2.2px;
+
+}

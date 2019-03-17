@@ -1,0 +1,24 @@
+
+
+<html>
+  
+    <body>
+      
+        <div class="loginBox">
+          <img src="../../assets/user.png" class="user">
+          <h2>Forgot password</h2>
+            <form id="formnewemp" name="formnewemp" #empdata = "ngForm" (ngSubmit)= "addnewemp(empdata.value)">        
+              <div class="form-group">
+                <p>Email</p>
+                <input type="text" name = "name" class="form-control" id="name"  ngModel>
+            </div> 
+            <button type="submit" value="add employee" class="btn">send mail</button><br>
+            </form>
+          </div>
+    
+      <!-- <div>
+        <router-outlet></router-outlet>
+      </div> -->
+    
+    </body>
+    </html>
