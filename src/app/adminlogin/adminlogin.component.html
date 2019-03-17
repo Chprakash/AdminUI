@@ -10,18 +10,26 @@
         <form id="formlogin"  sname="formlogin" #logindata = "ngForm" (ngSubmit)= "login(logindata.value)">        
             
           <!-- <div class = "alert alert-danger" *ngIf = "errorMessage">{{errorMessage}}</div> -->
+        <p *ngIf = "errorMessage" style="color:#F7C01A;">Wrong username or password !</p>
           <div class="form-group">
+             
               <p>Email</p>
-              <input type="text" class="form-control"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  name = "emailID" class="form-control" id="emailID"  ngModel  #emailref="ngModel"/>
+              <input type="text" required #emailID="ngModel" [class.is-invalid]="emailID.invalid && emailID.touched"
+              class="form-control"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  name = "emailID" class="form-control" id="emailID"  ngModel  #emailref="ngModel"/>
+              
+              <small class="text-danger" [class.d-none]="emailID.valid || emailID.untouched">email id is required</small>
               <div *ngIf="emailref.errors &&(emailref.touched || emailref.dirty)" class ="aler alert-danger">
                 <div [hidden]="!emailref.errors?.pattern">
                   Invalid email id
               </div> 
-          </div></div>
+          </div>
+        </div>
           
+
           <div class="form-group">
               <p>Password</p>
-              <input type="password"  name = "password" class="form-control" id="password"  ngModel >
+              <input type="password" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched"  name = "password" class="form-control" id="password"  ngModel >
+              <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required</small>
           </div>
           <button type="submit" value="add employee" class="btn">Log in</button>
             <a [routerLink]="['/adminregistration']" class="loginOption" ><i>New User ?</i></a><br>

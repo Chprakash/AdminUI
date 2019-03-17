@@ -7,9 +7,12 @@
             <app-side-menu></app-side-menu>
           </div>
           <div class="col-md-10">
-            <div class="approval">
+            <div>
+              <h1>Heading</h1>
+            </div>
+            <div class="approval table-wrapper-scroll-y my-custom-scrollbar">
               <table class="table table-striped">
-                <thead >
+                <thead>
                   <tr id="table-head">
                     <th>Sr. No</th>
                     <th>Client Id</th>
@@ -23,7 +26,13 @@
                   <td>{{data.tenantUserId}}</td>
                   <td>{{data.businessName}}</td>
                   <td>{{data.createdDate}}</td>
-                  <td></td>
+                  <!-- <td>{{data.isApproved}}</td> -->
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox" [checked] = 'data.isApproved'>
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
                 </tr>
                 </table>
             </div>

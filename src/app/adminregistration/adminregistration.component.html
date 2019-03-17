@@ -7,20 +7,26 @@
         <img src="../../assets/user.png" class="user">
         <h2>Sign up here</h2>
           <form id="signupform" name="signupform" #signupdata = "ngForm" (ngSubmit)= "signup(signupdata.value)"> 
+             
+              <!-- <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched">firstName is required</small><br> -->
+              <!-- <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">lastName is required</small> -->
               
               <div class="form-group">
                   <p>First Name </p>
-                  <input type="text" name = "firstName" class="form-control" id="firstName"  ngModel>
+                  <input type="text" required #firstName="ngModel" [class.is-invalid]="firstName.invalid && firstName.touched"
+                   name = "firstName" class="form-control" id="firstName"  ngModel>
               </div>
 
               <div class="form-group">
                   <p>Last Name</p>
-                  <input type="text" name = "lastName" class="form-control" id="lastName"  ngModel>
+                  <input type="text" required #lastName="ngModel" [class.is-invalid]="lastName.invalid && lastName.touched"
+                  name = "lastName" class="form-control" id="lastName"  ngModel>
               </div>
 
             <div class="form-group">
               <p>Email</p>
-              <input type="text" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name = "emailID" class="form-control" id="emailID"  ngModel #emailref="ngModel">
+              <input type="text" required #emailID="ngModel" [class.is-invalid]="emailID.invalid && emailID.touched"
+              class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name = "emailID" class="form-control" id="emailID"  ngModel #emailref="ngModel">
               <div *ngIf="emailref.errors &&(emailref.touched || emailref.dirty)" class ="aler alert-danger">
                 <div [hidden]="!emailref.errors?.pattern">
                   Invalid email id
@@ -29,7 +35,8 @@
             </div>
           <div class="form-group">
               <p>Password</p>
-              <input type="password" name = "password" class="form-control" id="password"  ngModel>
+              <input type="password" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched"
+              name = "password" class="form-control" id="password"  ngModel>
           </div>
           <button type="submit" value="add employee" class="btn">Submit</button> &nbsp;
           <button [routerLink]="['/adminlogin']" class="btn">Cancel</button>

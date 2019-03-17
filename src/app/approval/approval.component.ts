@@ -12,6 +12,9 @@ export class ApprovalComponent implements OnInit {
 
   constructor(private appservice: ApprovalserviceService) { }
 approvalData: Approvallist[];
+// tslint:disable-next-line:no-string-literal
+// status = this.approvalData['isApproved'];
+
   ngOnInit() {
     console.log('Approval Inside OnInit...');
     this.appservice.getApproval()
@@ -19,6 +22,8 @@ approvalData: Approvallist[];
     (
       data => {
         this.approvalData = data;
+        console.log('approvalData', this.approvalData);
+
       }
     );
   }
