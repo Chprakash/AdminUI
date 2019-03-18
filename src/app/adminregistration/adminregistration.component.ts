@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { SignupserviceService } from './signupservice.service';
 
 @Component({
@@ -9,22 +9,23 @@ import { SignupserviceService } from './signupservice.service';
 })
 export class AdminregistrationComponent implements OnInit {
 
-  constructor( private router: Router , private Signupservice: SignupserviceService ) {   }
+  constructor(private router: Router, private Signupservice: SignupserviceService) { }
   adminobj: object = [];
-  retri;
+
 
   ngOnInit() {
   }
   signup(signuodata) {
     console.log(signuodata);
+
     // ----------------------POST-----------------------------
     this.Signupservice.login(signuodata)
-    .subscribe(
-      data => {
-        console.log('Success...DATA FROM LOGIN' + data);
-        this.router.navigate(['./adminlogin']);
-      }
-    );
+      .subscribe(
+        data => {
+          console.log('Success...DATA FROM LOGIN' + data);
+          this.router.navigate(['./adminlogin']);
+        }
+      );
   }
 
 

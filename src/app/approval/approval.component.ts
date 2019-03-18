@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApprovalserviceService } from './approvalservice.service';
 import { Approvallist } from './approvallist';
+import {LocalStorageService} from 'ngx-webstorage';
 
 
 @Component({
@@ -10,11 +11,8 @@ import { Approvallist } from './approvallist';
 })
 export class ApprovalComponent implements OnInit {
 
-  constructor(private appservice: ApprovalserviceService) { }
+  constructor(private appservice: ApprovalserviceService , private storage: LocalStorageService) { }
 approvalData: Approvallist[];
-// tslint:disable-next-line:no-string-literal
-// status = this.approvalData['isApproved'];
-
   ngOnInit() {
     console.log('Approval Inside OnInit...');
     this.appservice.getApproval()
@@ -27,5 +25,24 @@ approvalData: Approvallist[];
       }
     );
   }
+
+  approval(data1: any) {
+    // console.log('Check box clicked...' , data1);
+    data1.loggedInUserId = this.storage.retrieve('id');
+    if (data1.isApproved) {
+      data1.isApproved = false;
+     } else {
+      data1.isApproved = true;
+     }
+    console.log(data1);
+
+    this.appservice.updateApproval(data1)
+    .subscribe(
+      data => {
+        console.log('Success...DATA FROM update' + data);
+      }
+      );
+  }
+
 
 }

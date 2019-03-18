@@ -29,7 +29,7 @@
                   <!-- <td>{{data.isApproved}}</td> -->
                   <td>
                     <label class="switch">
-                      <input type="checkbox" [checked] = 'data.isApproved'>
+                      <input (click) ="approval(data)" type="checkbox" [checked] = 'data.isApproved'>
                       <span class="slider round"></span>
                     </label>
                   </td>
