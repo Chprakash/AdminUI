@@ -38,7 +38,8 @@
               <input type="password" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched"
               name = "password" class="form-control" id="password"  ngModel>
           </div>
-          <button type="submit" value="add employee" class="btn">Submit</button> &nbsp;
+          <button [disabled]="signupdata.form.invalid" class="btn" type="submit">Submit</button>&nbsp;
+          <!-- <button type="submit" value=" " class="btn">Submit</button> &nbsp; -->
           <button [routerLink]="['/adminlogin']" class="btn">Cancel</button>
           <!-- <a [routerLink]="['/adminlogin']"  class="cancel"><i>cancel</i></a><br> -->
             <!-- <a [routerLink]="['adminforgot']" ><i>Forget Password</i></a> -->

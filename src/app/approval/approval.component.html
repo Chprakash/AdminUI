@@ -28,7 +28,11 @@
                   <td>{{data.createdDate}}</td>
                   <!-- <td>{{data.isApproved}}</td> -->
                   <td>
-                    <label class="switch">
+                      <div id="chkActive" *ngIf = "data.isApproved; else elseBlock">
+                        active</div>
+                        <ng-template #elseBlock>Inactive</ng-template>
+                      
+                        &nbsp;<label class="switch">
                       <input (click) ="approval(data)" type="checkbox" [checked] = 'data.isApproved'>
                       <span class="slider round"></span>
                     </label>

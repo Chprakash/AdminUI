@@ -16,6 +16,7 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 import { LoginserviceService } from './adminlogin/loginservice.service';
 import { ApprovalComponent } from './approval/approval.component';
 import { ApplicationsComponent } from './applications/applications.component';
+import { NavbarComponent } from './navbar/navbar.component';
 // import { HttpClient } from '@angular/common/http';
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ApplicationsComponent } from './applications/applications.component';
     DashBoardComponent,
     SideMenuComponent,
     ApprovalComponent,
-    ApplicationsComponent
+    ApplicationsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

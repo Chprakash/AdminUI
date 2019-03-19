@@ -11,12 +11,12 @@ body
 .loginBox 
 {
 	position: absolute;
-	top: 52%;
+	top: 54%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	width: 350px;
+	width: 340px;
 	height: 420px;
-	padding:  80px 40px;
+	padding:  57px 40px;
 	box-sizing: border-box;
     background : darkslategray;
     
@@ -24,8 +24,8 @@ body
 
 .user
 {
-	width: 120px;
-	height: 120px;
+	width: 105px;
+	height: 110px;
 	border-radius: 50%;
 	overflow: hidden;
 	position: absolute;
@@ -102,7 +102,7 @@ a:hover{
 
 .loginBox input {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;

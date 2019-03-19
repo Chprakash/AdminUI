@@ -125,3 +125,8 @@ tr {
   }
 
   /* status button switch css----END */
+
+  #chkActive {
+    display: inline;
+    color: green;
+  }
