@@ -1,0 +1,9 @@
+<div id="chkActive" *ngIf = "data.isApproved; else elseBlock">
+  Active</div>
+  <ng-template #elseBlock>Inactive</ng-template>
+
+  &nbsp;<label class="switch">
+<input (click) ="approval(data)" type="checkbox" [checked] = 'data.isApproved'>
+<span class="slider round"></span>
+</label>
+

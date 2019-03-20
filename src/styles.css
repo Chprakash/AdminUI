@@ -1,4 +1,5 @@
-
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
 body
 {
 	margin: 0;
@@ -119,3 +120,4 @@ a:hover{
     background: transparent;
     outline: none;
 }
+

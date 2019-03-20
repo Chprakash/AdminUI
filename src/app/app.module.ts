@@ -17,6 +17,8 @@ import { LoginserviceService } from './adminlogin/loginservice.service';
 import { ApprovalComponent } from './approval/approval.component';
 import { ApplicationsComponent } from './applications/applications.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AgGridModule } from 'ag-grid-angular/main';
+import { ToggleButtonComponent } from './approval/toggle-button/toggle-button.component';
 // import { HttpClient } from '@angular/common/http';
 
 @NgModule({
@@ -29,7 +31,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     SideMenuComponent,
     ApprovalComponent,
     ApplicationsComponent,
-    NavbarComponent
+    NavbarComponent,
+    ToggleButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -38,8 +41,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     HttpClientModule,
     // HttpClient,
     NgxWebstorageModule.forRoot(),
+    AgGridModule.withComponents([ApprovalComponent])
   ],
-  providers: [LoginserviceService],
+  providers: [LoginserviceService], entryComponents: [ToggleButtonComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
