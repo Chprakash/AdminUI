@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CountserviceService } from './countservice.service';
 import { Count } from './count';
+import * as $ from 'jquery';
+
 @Component({
   selector: 'app-dash-board',
   templateUrl: './dash-board.component.html',
@@ -12,6 +14,15 @@ export class DashBoardComponent implements OnInit {
   constructor(private countservice: CountserviceService) { }
 
   ngOnInit() {
+
+    // tslint:disable-next-line:only-arrow-functions
+    $(document).ready(function() {
+      // tslint:disable-next-line:only-arrow-functions
+      $('#sidebarCollapse').on('click', function() {
+          $('#sidebar').toggleClass('active');
+      });
+  });
+
 
     console.log('Approval Inside OnInit...');
     this.countservice.getcountl()

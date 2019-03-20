@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  admin_baseurl: 'https://68427bec.ngrok.io/AdminService'
+  admin_baseurl: 'https://ee8dbc3e.ngrok.io/AdminService'
 };
 
 /*
