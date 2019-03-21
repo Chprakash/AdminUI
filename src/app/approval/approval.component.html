@@ -20,36 +20,6 @@
                  (gridReady)="onGridReady($event)"
             >
             </ag-grid-angular>
-            <div class="approval table-wrapper-scroll-y my-custom-scrollbar">
-              <table class="table table-striped">
-                <thead>
-                  <tr id="table-head">
-                    <th>Sr. No</th>
-                    <th>Client Id</th>
-                    <th>business Name</th>
-                    <th>Request Date</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tr *ngFor= "let data of approvalData; let i= index" >
-                  <td>{{i+1}}</td>
-                  <td>{{data.tenantUserId}}</td>
-                  <td>{{data.businessName}}</td>
-                  <td>{{data.createdDate}}</td>
-                  <!-- <td>{{data.isApproved}}</td> -->
-                  <td>
-                      <div id="chkActive" *ngIf = "data.isApproved; else elseBlock">
-                        Active</div>
-                        <ng-template #elseBlock>Inactive</ng-template>
-                      
-                        &nbsp;<label class="switch">
-                      <input (click) ="approval(data)" type="checkbox" [checked] = 'data.isApproved'>
-                      <span class="slider round"></span>
-                    </label>
-                  </td>
-                </tr>
-                </table>
-            </div>
           </div>
       </div>
   </div>

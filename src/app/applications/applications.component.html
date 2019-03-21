@@ -3,32 +3,23 @@
 <div class="dashboard">
   <div class="container-fluid">
       <div class="row">
-          <!-- <div class="col-md-2">
+          <div class="col-md-2">
             <app-side-menu></app-side-menu>
-          </div> -->
-          <div class="col-md-12">
-            <div class="approval">
-              <table class="table table-striped">
-                <thead >
-                  <tr id="table-head">
-                    <th>Sr. No</th>
-                    <th>Client Id</th>
-                    <th>business Name</th>
-                    <th>URL</th>
-                    <th>Publish</th>
-                  </tr>
-                </thead>
-                <tr *ngFor= "let data of applicationdata; let i= index" >
-                  <td>{{i+1}}</td>
-                  <td>{{data.tenantUserId}}</td>
-                  <td>{{data.businessName}}</td>
-                  <td>{{data.url}}</td>
-                  <td>
-                    <a class="btn btn-primary" target="_blank" ng-href="www.google.com" ng-mouseclick="openTab()">Publish</a>
-                  </td>
-                </tr>
-                </table>
+          </div>
+          <div class="col-md-10">
+            <div>
+              <h1>Heading</h1>
             </div>
+            <ag-grid-angular 
+                 style="width: 100%; height: 350px;" 
+                 class="ag-theme-balham"
+                 [columnDefs]="columnDefs"
+                 [animateRows]="true"
+                 [pagination]="true"
+                 [sortingOrder]="sortingOrder"
+                 (gridReady)="onGridReady($event)"
+            >
+            </ag-grid-angular>
           </div>
       </div>
   </div>

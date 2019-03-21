@@ -19,6 +19,7 @@ import { ApplicationsComponent } from './applications/applications.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AgGridModule } from 'ag-grid-angular/main';
 import { ToggleButtonComponent } from './approval/toggle-button/toggle-button.component';
+import { PublishButtonComponent } from './applications/publish-button/publish-button.component';
 // import { HttpClient } from '@angular/common/http';
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ToggleButtonComponent } from './approval/toggle-button/toggle-button.co
     ApprovalComponent,
     ApplicationsComponent,
     NavbarComponent,
-    ToggleButtonComponent
+    ToggleButtonComponent,
+    PublishButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -41,9 +43,9 @@ import { ToggleButtonComponent } from './approval/toggle-button/toggle-button.co
     HttpClientModule,
     // HttpClient,
     NgxWebstorageModule.forRoot(),
-    AgGridModule.withComponents([ApprovalComponent])
+    AgGridModule.withComponents([ApprovalComponent, ApplicationsComponent])
   ],
-  providers: [LoginserviceService], entryComponents: [ToggleButtonComponent],
+  providers: [LoginserviceService], entryComponents: [ToggleButtonComponent, PublishButtonComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

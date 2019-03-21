@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApprovalserviceService } from './approvalservice.service';
 import { Approvallist } from './approvallist';
-import { LocalStorageService } from 'ngx-webstorage';
 import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
 
 
@@ -17,7 +16,7 @@ export class ApprovalComponent implements OnInit {
   private columnDefs;
   private sortingOrder;
 
-  constructor(private appservice: ApprovalserviceService , private storage: LocalStorageService) {
+  constructor(private appservice: ApprovalserviceService) {
     this.columnDefs = [
       {headerName: 'Client Id', field: 'tenantUserId', sortable: true, filter: true, sortingOrder:["asc","desc"]},
       {headerName: 'Business Name', field: 'businessName', sortable: true, filter: true, sortingOrder:["asc","desc"]},
@@ -36,24 +35,6 @@ export class ApprovalComponent implements OnInit {
         console.log('approvalData', this.approvalData);
       }
     );
-  }
-
-  approval(data1: any) {
-    // console.log('Check box clicked...' , data1);
-    data1.loggedInUserId = this.storage.retrieve('id');
-    if (data1.isApproved) {
-      data1.isApproved = false;
-     } else {
-      data1.isApproved = true;
-     }
-    console.log(data1);
-
-    this.appservice.updateApproval(data1)
-    .subscribe(
-      data => {
-        console.log('Success...DATA FROM update' + data);
-      }
-      );
   }
   onGridReady(params){
     this.gridApi=params.api;
