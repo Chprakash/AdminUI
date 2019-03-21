@@ -24,6 +24,7 @@ export class ApplicationsComponent implements OnInit {
       {headerName: 'Client Id', field: 'tenantUserId', sortable: true, filter: true, sortingOrder:["asc","desc"]},
       {headerName: 'Business Name', field: 'businessName', sortable: true, filter: true, sortingOrder:["asc","desc"]},
       {headerName: 'URL', field: 'url', sortable: true, filter: true, sortingOrder:["asc","desc"]},
+      {headerName: 'Status', field: 'status', sortable: true, filter: true, sortingOrder:["asc","desc"]},
       {headerName: 'Publish', field: 'status', sortable: true, filter: true, sortingOrder:["asc","desc"], cellRendererFramework: PublishButtonComponent}
     ];
    }
