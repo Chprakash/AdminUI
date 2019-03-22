@@ -3,6 +3,7 @@ import { ApplicationserviceService } from './applicationservice.service';
 import { applicatonlist } from './applicationlist';
 import { PublishButtonComponent } from './publish-button/publish-button.component';
 import { environment } from 'src/environments/environment';
+import * as $ from 'jquery';
 
 
 @Component({
@@ -25,11 +26,20 @@ export class ApplicationsComponent implements OnInit {
       {headerName: 'Business Name', field: 'businessName', sortable: true, filter: true, sortingOrder:["asc","desc"]},
       {headerName: 'URL', field: 'url', sortable: true, filter: true, sortingOrder:["asc","desc"]},
       {headerName: 'Status', field: 'status', sortable: true, filter: true, sortingOrder:["asc","desc"]},
+      // tslint:disable-next-line:max-line-length
       {headerName: 'Publish', field: 'status', sortable: true, filter: true, sortingOrder:["asc","desc"], cellRendererFramework: PublishButtonComponent}
     ];
    }
 
-  ngOnInit() {}
+  ngOnInit() {
+     // tslint:disable-next-line:only-arrow-functions
+     $(document).ready(function() {
+      // tslint:disable-next-line:only-arrow-functions
+      $('#sidebarCollapse').on('click', function() {
+          $('#sidebar').toggleClass('active');
+      });
+  });
+  }
 
   onGridReady(params){
     this.gridApi=params.api;

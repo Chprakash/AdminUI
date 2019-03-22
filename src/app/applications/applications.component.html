@@ -1,28 +1,122 @@
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<!-- Bootstrap Js CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-<div class="dashboard">
-  <div class="container-fluid">
-      <div class="row">
-          <div class="col-md-2">
-            <app-side-menu></app-side-menu>
-          </div>
-          <div class="col-md-10">
-            <div>
-              <h1>Heading</h1>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><i class="fas fa-laugh-wink"></i> &nbsp;ADMIN</h3>
+                <strong><i class="fas fa-laugh-wink"></i></strong>
             </div>
-            <ag-grid-angular 
-                 style="width: 100%; height: 350px;" 
-                 class="ag-theme-balham"
-                 [columnDefs]="columnDefs"
-                 [animateRows]="true"
-                 [pagination]="true"
-                 [sortingOrder]="sortingOrder"
-                 (gridReady)="onGridReady($event)"
-            >
-            </ag-grid-angular>
-          </div>
-      </div>
-  </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a routerLink="/dashboard" routerLinkActive="active"><i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="fas fa-briefcase"></i>
+                        Client
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <a routerLink="/approval" routerLinkActive="active"><li class="fas fa-image"> </li>
+                            Approval</a>
+                        <a routerLink="/application"> <li class="fas fa-copy"> </li>Application</a>
+                        <!-- <li><a href="#">Page 3</a></li> -->
+                    </ul>
+                </li>
+                <!-- <li>
+              <a href="#">
+                  <i class="glyphicon glyphicon-link"></i>
+                  FAQ
+              </a>
+          </li> -->
+                <li>
+                    <a href="#">
+                        <i class= "fas fa-question"></i>
+                        FAQ
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                            <i class="fas fa-address-book fa-"></i>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+            <!-- <ul class="list-unstyled CTAs">
+          <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a></li>
+          <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a></li>
+      </ul> -->
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                            <!-- <i class="navbar-toggler-icon"></i> -->
+                            <!-- <span>Menu</span> -->
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                                <div class="bar3"></div>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <!-- <li><a href="#">Page</a></li>
+                            <li><a href="#">Page</a></li>
+                            <li><a href="#">Page</a></li>
+                            <li><a href="#">Page</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h5 style="font-weight: 700;color: #2A3F54;">Application</h5><br>
+          <ag-grid-angular 
+               style="width: 100%; height: 350px;" 
+               class="ag-theme-balham"
+               [columnDefs]="columnDefs"
+               [animateRows]="true"
+               [pagination]="true"
+               [sortingOrder]="sortingOrder"
+               (gridReady)="onGridReady($event)"
+          >
+          </ag-grid-angular>
+        </div>
+    </div>
 </div>
 
-<!-- <app-side-menu></app-side-menu> -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+                
+        
+        </div>    
+        <div class="col-md-8">
+            
+        </div>
+</div>
+</div>
+
+                <!-- <app-dash-board></app-dash-board> -->
+        </div>
+    </div>
+
+</body>
