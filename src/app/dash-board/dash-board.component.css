@@ -274,7 +274,7 @@ a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
     font-size: 0.6em;
 }
 a[aria-expanded="true"]::before {
-    content: '\e260';
+    /* content: '\e260'; */
 }
 
 
@@ -318,6 +318,7 @@ a.article, a.article:hover {
     transition: all 0.3s;
     /* max-width: 100%; */
     width: 100%;
+    background-color: white;
 }
 
 
