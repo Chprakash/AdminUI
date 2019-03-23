@@ -22,8 +22,8 @@ export class ApprovalComponent implements OnInit {
     this.columnDefs = [
       {headerName: 'Client Id', field: 'tenantUserId', sortable: true, filter: true, sortingOrder: ['asc', 'desc']},
       {headerName: 'Business Name', field: 'businessName', sortable: true, filter: true, sortingOrder: ['asc', 'desc']},
-      {headerName: 'Request Data', field: 'createdDate', sortable: true, filter: true, sortingOrder: ['asc', 'desc']},
-      // tslint:disable-next-line:max-line-length
+      {headerName: 'Request Date', field: 'createdDate', sortable: true, filter: true, sortingOrder: ['asc', 'desc']},
+      {headerName: 'Approved Date', field: 'updatedDate', sortable: true, filter: true, sortingOrder: ['asc', 'desc']},
       {headerName: 'Status', field: 'isApproved', sortable: true, filter: true, sortingOrder: ['asc', 'desc'], cellRendererFramework: ToggleButtonComponent}
     ];
    }
