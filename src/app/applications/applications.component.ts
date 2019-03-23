@@ -41,9 +41,9 @@ export class ApplicationsComponent implements OnInit {
   });
   }
 
-  onGridReady(params){
-    this.gridApi=params.api;
-    this.gridColumnApi=params.columnApi;
+  onGridReady(params) {
+    this.gridApi = params.api;
+    this.gridColumnApi = params.columnApi;
     this.appliservice.getApplication()
     .subscribe
     (
@@ -53,7 +53,7 @@ export class ApplicationsComponent implements OnInit {
         console.log('Application data...' , data);
       }
     );
-    
+
   }
 
 }

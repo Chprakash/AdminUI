@@ -1,5 +1,6 @@
 @import "~ag-grid-community/dist/styles/ag-grid.css";
-@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+/* @import "~ag-grid-community/dist/styles/ag-theme-balham.css"; */
+@import "~ag-grid-community/dist/styles/ag-theme-dark.css";
 body
 {
 	margin: 0;
@@ -121,3 +122,10 @@ a:hover{
     outline: none;
 }
 
+
+.ag-theme-dark .ag-header{
+	background-color: #2A3F54;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+}

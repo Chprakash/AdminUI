@@ -93,7 +93,7 @@ a, a:hover, a:focus {
     /* background: #fff; */
     /* border: none; */
     /* border-radius: 0; */
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); */
 }
 
@@ -342,4 +342,34 @@ a.article, a.article:hover {
 
   a[aria-expanded="false"][_ngcontent-c1]::before, a[aria-expanded="true"][_ngcontent-c1]::before {
       content: none;
+  }
+
+
+  
+
+/* ***************HEADER********************* */
+
+
+.header-wrapper{
+    background: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  #wedage {
+    display: inline-flex;
+    padding-left: 0;
+  }
+  
+  .img-profile{
+    height: 34px;
+  }
+  
+  .badge-danger {
+    color: white;
+    background-color: #2A3F54;
+  }
+  
+  #wedage-wrapper
+  {
+      padding-left: 20%;
+      padding-top: 10px;
   }

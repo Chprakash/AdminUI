@@ -24,8 +24,10 @@ export class ApprovalComponent implements OnInit {
       {headerName: 'Business Name', field: 'businessName', sortable: true, filter: true, sortingOrder: ['asc', 'desc']},
       {headerName: 'Request Date', field: 'createdDate', sortable: true, filter: true, sortingOrder: ['asc', 'desc']},
       {headerName: 'Approved Date', field: 'updatedDate', sortable: true, filter: true, sortingOrder: ['asc', 'desc']},
+      // tslint:disable-next-line:max-line-length
       {headerName: 'Status', field: 'isApproved', sortable: true, filter: true, sortingOrder: ['asc', 'desc'], cellRendererFramework: ToggleButtonComponent}
     ];
+
    }
   approvalData: Approvallist[];
   ngOnInit() {
