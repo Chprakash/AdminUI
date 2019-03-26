@@ -7,6 +7,7 @@ import { DashBoardComponent } from './dash-board/dash-board.component';
 import { ApprovalComponent } from './approval/approval.component';
 import { ApplicationsComponent } from './applications/applications.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
 
 const routes: Routes = [
 {  path : '' , redirectTo : '/adminlogin' , pathMatch : 'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
 {  path : 'dashboard' , component: DashBoardComponent},
 {  path : 'approval' , component: ApprovalComponent},
 {  path : 'application' , component: ApplicationsComponent},
-{  path : 'navbar' , component: NavbarComponent}
+{  path : 'navbar' , component: NavbarComponent},
+{  path : 'sidemenu' , component: SideMenuComponent}
 
 ];
 

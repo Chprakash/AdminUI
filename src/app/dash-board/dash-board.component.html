@@ -1,216 +1,124 @@
-<!-- jQuery CDN -->
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<!-- Bootstrap Js CDN -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-
-<body>
-    <div class="wrapper">
-        <!-- Sidebar Holder -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3><i class="fas fa-laugh-wink"></i> &nbsp;ADMIN</h3>
-                <strong><i class="fas fa-laugh-wink"></i></strong>
-            </div>
-
-            <ul class="list-unstyled components">
-                <!-- <li class="active">
-              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
-                  <i class="glyphicon glyphicon-home"></i>
-                  Home
-              </a>
-              <ul class="collapse list-unstyled" id="homeSubmenu">
-                  <li><a href="#">Home 1</a></li>
-                  <li><a href="#">Home 2</a></li>
-                  <li><a href="#">Home 3</a></li>
-              </ul>
-          </li> -->
-                <li>
-                    <a routerLink="/dashboard" routerLinkActive="active"><i class="fas fa-home"></i>
-                        Home
-                    </a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
-                        <i class="fas fa-briefcase"></i>
-                        Client
-                    </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <a routerLink="/approval"><li class="fas fa-image"> </li>
-                            Approval</a>
-                        <a routerLink="/application"> <li class="fas fa-copy"> </li>Application</a>
-                        <!-- <li><a href="#">Page 3</a></li> -->
-                    </ul>
-                </li>
-                <!-- <li>
-              <a href="#">
-                  <i class="glyphicon glyphicon-link"></i>
-                  FAQ
-              </a>
-          </li> -->
-                <li>
-                    <a href="#">
-                        <i class= "fas fa-question"></i>
-                        FAQ
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                            <i class="fas fa-address-book fa-"></i>
-                        Contact
-                    </a>
-                </li>
-            </ul>
-
-            <!-- <ul class="list-unstyled CTAs">
-          <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a></li>
-          <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a></li>
-      </ul> -->
-        </nav>
-
-        <!-- Page Content Holder -->
-        <div id="content">
-          <div class="header-wrapper">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-6 col-sm-6">
-                  <h4 style="padding-top:21px;">Comapny_Name</h4>
-                </div>
-                <div class="col-md-6 col-sm-6" id="wedage-wrapper">
-                  <ul id="wedage">
-                    <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-bell fa-fw"></i>
-                      <!-- Counter - Alerts -->
-                      <span class="badge badge-danger badge-counter">3+</span>
-                    </a>
-                    <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-envelope fa-fw"></i>
-                      <!-- Counter - Messages -->
-                      <span class="badge badge-danger badge-counter">7</span>
-                    </a>
-                    <a id="profile-img"  class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <span class="mr-2 d-none d-lg-inline text-gray-600 small">User_name</span>
-                      <img class="img-profile rounded-circle" src="../assets/iron.png">
-                    </a>
-                  </ul>
-                </div>
-                </div>
+<!-- <app-navbar></app-navbar> -->
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-12" id="wrapper-data">
+          <app-navbar></app-navbar>
+          <div class="" id="content">
+              <div class="containert-fluid">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="header-wrapper">
+                              <div class="container-fluid">
+                                  <div class="row">
+                                      <div class="col-md-6 col-sm-6">
+                                          <h4 style="padding-top:21px; float: left;">Comapny_Name</h4>
+                                      </div>
+                                      <div class="col-md-6 col-sm-6" id="wedage-wrapper">
+                                          <ul id="wedage">
+                                              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown"
+                                                  role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                  aria-expanded="false">
+                                                  <i class="fas fa-bell fa-fw"></i>
+                                                  <!-- Counter - Alerts -->
+                                                  <span class="badge badge-danger badge-counter">3+</span>
+                                              </a>
+                                              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown"
+                                                  role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                  aria-expanded="false">
+                                                  <i class="fas fa-envelope fa-fw"></i>
+                                                  <!-- Counter - Messages -->
+                                                  <span class="badge badge-danger badge-counter">7</span>
+                                              </a>
+                                              <a id="profile-img" class="nav-link dropdown-toggle" href="#"
+                                                  id="userDropdown" role="button" data-toggle="dropdown"
+                                                  aria-haspopup="true" aria-expanded="false">
+                                                  <p id="user-name">
+                                                      <small><strong>{{user_fname +' '+ user_lname}}</strong></small>
+                                                  </p>
+                                                  <!-- <span class="mr-2 d-none d-lg-inline text-gray-600 small">User_name</span> -->
+                                                  <img class="img-profile rounded-circle" src="../assets/iron.png">
+                                              </a>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
+              <!-- <div class="container"> -->
+              <div class="col-md-12" id="content2">
+                <div class="container">
+                  <div class="row">
+                      <div class="col-md-3">
+                          <div class="card border-left-primary shadow h-100 py-2">
+                              <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                  <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Business Count</div>
+                                    <div class="h5 mb-0 font-weight-bold Sblue-800">{{countdata}}</div>
+                                  </div>
+                                  <div class="col-auto">
+                                    <i id="count" class="fas fa-briefcase fa-2x text-gray-300"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card border-left-primary shadow h-100 py-2">
+                              <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                  <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Business Count</div>
+                                    <div class="h5 mb-0 font-weight-bold Sblue-800">254</div>
+                                  </div>
+                                  <div class="col-auto">
+                                    <i id="count" class="fas fa-briefcase fa-2x text-gray-300"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>    
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card border-left-primary shadow h-100 py-2">
+                              <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                  <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Business Count</div>
+                                    <div class="h5 mb-0 font-weight-bold Sblue-800">1254</div>
+                                  </div>
+                                  <div class="col-auto">
+                                    <i id="count" class="fas fa-briefcase fa-2x text-gray-300"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>   
+                      </div>
           
+                      <div class="col-md-3">
+                          <div class="card border-left-primary shadow h-100 py-2">
+                              <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                  <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Business Count</div>
+                                    <div class="h5 mb-0 font-weight-bold Sblue-800">1254786</div>
+                                  </div>
+                                  <div class="col-auto">
+                                    <i id="count" class="fas fa-briefcase fa-2x text-gray-300"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                      </div>
+                  </div>
           
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
+              </div>
 
-                    <div class="navbar-header">
-                        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
-                            <!-- <i class="navbar-toggler-icon"></i> -->
-                            <!-- <span>Menu</span> -->
-                            <div class="bar1"></div>
-                            <div class="bar2"></div>
-                                <div class="bar3"></div>
-                        </button>
-                      </div>
+              </div>
+              <!-- </div> -->
+          </div>
+      </div>
 
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <!-- <li><a href="#">Page</a></li>
-                            <li><a href="#">Page</a></li>
-                            <li><a href="#">Page</a></li>
-                            <li><a href="#">Page</a></li> -->
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
-
-<div class="container-fluid">
-  <div class="col-md-12">
-    <h4 style="font-weight: 700;color: #2A3F54;">Dashboard</h4><br>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card border-left-primary shadow h-100 py-2">
-                    <div class="card-body">
-                      <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Business Count</div>
-                          <div class="h5 mb-0 font-weight-bold Sblue-800">{{countdata}}</div>
-                        </div>
-                        <div class="col-auto">
-                          <i id="count" class="fas fa-briefcase fa-2x text-gray-300"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card border-left-primary shadow h-100 py-2">
-                    <div class="card-body">
-                      <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Business Count</div>
-                          <div class="h5 mb-0 font-weight-bold Sblue-800">254</div>
-                        </div>
-                        <div class="col-auto">
-                          <i id="count" class="fas fa-briefcase fa-2x text-gray-300"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>    
-            </div>
-            <div class="col-md-3">
-                <div class="card border-left-primary shadow h-100 py-2">
-                    <div class="card-body">
-                      <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Business Count</div>
-                          <div class="h5 mb-0 font-weight-bold Sblue-800">1254</div>
-                        </div>
-                        <div class="col-auto">
-                          <i id="count" class="fas fa-briefcase fa-2x text-gray-300"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>   
-            </div>
-
-            <div class="col-md-3">
-                <div class="card border-left-primary shadow h-100 py-2">
-                    <div class="card-body">
-                      <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Business Count</div>
-                          <div class="h5 mb-0 font-weight-bold Sblue-800">1254786</div>
-                        </div>
-                        <div class="col-auto">
-                          <i id="count" class="fas fa-briefcase fa-2x text-gray-300"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-        </div>
-
-    </div>
+  </div>
 </div>
-</div>
-
-
-<div class="container-fluid">
-    <div class="row">
-        <!-- <div class="col-md-4">
-                
-        
-        </div>    
-        <div class="col-md-8">
-            
-        </div> -->
-        
-</div>
-</div>
-
-                <!-- <app-dash-board></app-dash-board> -->
-        </div>
-    </div>
-
-</body>

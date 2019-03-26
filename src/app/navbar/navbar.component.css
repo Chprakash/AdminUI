@@ -24,11 +24,11 @@ a, a:hover, a:focus {
 
 .navbar {
     padding: 15px 10px;
-    background: #fff;
+    /* background: #fff; */
     border: none;
-    border-radius: 0;
+    /* border-radius: 0; */
     margin-bottom: 40px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); */
 }
 
 .navbar-btn {
@@ -123,6 +123,7 @@ i, span {
 #sidebar ul.components {
     padding: 20px 0;
     /* border-bottom: 1px solid #47748b; */
+    height: -webkit-fill-available;
 }
 
 #sidebar ul li a {
@@ -157,7 +158,7 @@ a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
     font-size: 0.6em;
 }
 a[aria-expanded="true"]::before {
-    content: '\e260';
+    /* content: '\e260'; */
 }
 
 
@@ -195,12 +196,12 @@ a.article, a.article:hover {
     CONTENT STYLE
 ----------------------------------------------------- */
 #content {
-    padding: 20px;
+    /* padding: 20px;
     min-height: 100vh;
-    transition: all 0.3s;
+    transition: all 0.3s; */
     /* max-width: 100%; */
     width: 100%;
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
 }
 
 
@@ -277,3 +278,8 @@ a.article, a.article:hover {
   a[aria-expanded="false"][_ngcontent-c1]::before, a[aria-expanded="true"][_ngcontent-c1]::before {
       content: none;
   }
+
+
+  .navbar-header {
+    padding: 10px;
+}
