@@ -30,7 +30,7 @@ export class ApprovalComponent implements OnInit {
       {headerName: 'Request Date', field: 'createdDate', sortable: true, filter: true, sortingOrder: ['asc', 'desc']},
       {headerName: 'Approved Date', field: 'updatedDate', sortable: true, filter: true, sortingOrder: ['asc', 'desc']},
       // tslint:disable-next-line:max-line-length
-      {headerName: 'Status', field: 'isApproved', sortable: true, filter: true, sortingOrder: ['asc', 'desc'], cellRendererFramework: ToggleButtonComponent}
+      {headerName: 'Status', field: 'isApproved', sortable: true, filter: true, sortingOrder: ['asc', 'desc'], autoHeight: true, cellRendererFramework: ToggleButtonComponent}
     ];
 
    }

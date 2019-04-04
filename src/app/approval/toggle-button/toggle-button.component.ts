@@ -8,25 +8,25 @@ import { LocalStorageService } from 'ngx-webstorage';
   styleUrls: ['./toggle-button.component.css']
 })
 export class ToggleButtonComponent implements OnInit {
-  private data : any;
-  private params : any;
+  private data: any;
+  private params: any;
   constructor(private appservice: ApprovalserviceService , private storage: LocalStorageService) { }
 
   ngOnInit() {
   }
-  agInit(params){
-    this.params=params.data;
-    this.data=params.value;
+  agInit(params) {
+    this.params = params.data;
+    this.data = params.value;
   }
 
-  approval(){
+  approval() {
     this.params.loggedInUserId = this.storage.retrieve('id');
     if (this.params.isApproved) {
-      this.data=false;
+      this.data = false;
       this.params.isApproved = false;
      } else {
-       this.data=true;
-      this.params.isApproved = true;
+       this.data = true;
+       this.params.isApproved = true;
      }
 
     this.appservice.updateApproval(this.params)
@@ -34,5 +34,4 @@ export class ToggleButtonComponent implements OnInit {
       data => {}
       );
   }
-  
 }
